@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+a {
+  color: #2563eb;
+}
+
+a:hover {
+  color: #3b82f6;
+}
