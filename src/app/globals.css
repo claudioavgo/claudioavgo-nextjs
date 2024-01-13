@@ -18,7 +18,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #262626
+  background-color: #171717;
+  opacity: 1;
+  background-image:  linear-gradient(#16213d 1px, transparent 1px), linear-gradient(to right, #16213d 1px, #171717 1px);
+  background-size: 20px 20px;
 }
 
 a {
@@ -27,4 +30,22 @@ a {
 
 a:hover {
   color: #3b82f6;
+}
+
+
+.girando {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 90deg;
+  }
 }

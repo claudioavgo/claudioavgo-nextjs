@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
+import TabBar from '@/components/TabBar';
 
 export default function Home() {
 
@@ -27,9 +28,35 @@ export default function Home() {
 
     fetchProjects();
   }, []);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const delay = 1000; // 1 segundo em milissegundos
+
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, delay);
+
+    // Limpar o timeout se o componente for desmontado antes do atraso de 1 segundo
+    return () => clearTimeout(timeoutId);
+  }, []);
   
+  if (loading)
+    return (
+      <main className="flex justify-center items-center h-screen ">
+        <svg className="girando" width="220" height="224" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M12 1h2v8h8v4h-2v-2h-8V5h-2V3h2zM8 7V5h2v2zM6 9V7h2v2zm-2 2V9h2v2zm10 8v2h-2v2h-2v-8H2v-4h2v2h8v6zm2-2v2h-2v-2zm2-2v2h-2v-2zm0 0h2v-2h-2z"/>
+        </svg>
+      </main>
+    )
+
   return (
-    <main className="flex justify-center items-center h-screen bg-neutral-900 p-20">
+    <main className="flex flex-col justify-center items-center h-full">
+    
+      <TabBar/>
+      
+      <div className='p-20'>
       <div className='space-y-5'>
         <div className='text-left'>
           <h1 className='text-2xl'>Hello, my name is <span className='font-semibold bg-pink-500 rounded px-1 text-pink-900'>Cláudio Alves</span>.</h1>
@@ -65,12 +92,10 @@ export default function Home() {
           <h1>- Discord: <a href='discord:claudioav'>@claudioav</a></h1>
           <h1>- Phone: <a href='tel:+5581999416600'>+55 81 999416600</a></h1>
         </div>
-
-        {/* <div className='text-lg font-mono text-left'>
-          <h1 className='text-2xl'># Posts</h1>
-          <h1>- Como criar um banco de dados na azure</h1>
-        </div> */}
       </div>
+      </div>
+
+      
     </main>
   )
 }
