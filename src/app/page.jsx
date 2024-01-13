@@ -29,7 +29,7 @@ export default function Home() {
   }, []);
   
   return (
-    <main className="flex justify-center items-center h-screen bg-neutral-900">
+    <main className="flex justify-center items-center h-screen bg-neutral-900 p-20">
       <div className='space-y-5'>
         <div className='text-left'>
           <h1 className='text-2xl'>Hello, my name is <span className='font-semibold bg-pink-500 rounded px-1 text-pink-900'>Cláudio Alves</span>.</h1>
