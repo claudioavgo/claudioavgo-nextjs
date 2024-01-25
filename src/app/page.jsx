@@ -53,9 +53,6 @@ export default function Home() {
 
   return (
     <main className="flex flex-col justify-center items-center h-full">
-    
-      
-      
       <div className='px-5 space-y-5'>
 
       <TabBar/>
