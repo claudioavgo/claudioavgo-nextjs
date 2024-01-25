@@ -10,9 +10,7 @@ export default function TabBar() {
                 <Link href="/">
                     <h1 className="text-xl text-white bg-white/10 rounded p-2">Home</h1>
                 </Link>
-                <Link href="/posts">
-                    <h1 className="text-xl text-white/20">Posts</h1>
-                </Link>
+                <h1 className="text-xl text-white/20">Posts</h1>
             </div>
         </div>
     )
