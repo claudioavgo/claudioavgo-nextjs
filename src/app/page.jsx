@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import TabBar from '@/components/TabBar';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -60,21 +61,23 @@ export default function Home() {
       <div className='space-y-5'>
         <div className='text-left'>
           <h1 className='text-xl'>Hello, my name is <span className='font-semibold bg-pink-500 rounded px-1 text-pink-900'>Cláudio Alves</span>.</h1>
-          <h1 className='text-lg text-gray-300'>I'm working with Back-End development.</h1>
+          <h1 className='text-lg text-gray-300'>I'm working with <strong>Software Development</strong>.</h1>
         </div>
 
         <div className='text-lg font-mono text-left'>
           <h1 className='text-xl'># My stacks</h1>
-          <h1>- Python/Flask/Django 2y</h1>
-          <h1>- JavaScript/React 1y</h1>
-          <h1>- Java 6m</h1>
-          <h1>- C 6m</h1>
+          <h1>- Python/Flask/Django</h1>
+          <h1>- JavaScript/React</h1>
+          <h1>- Java</h1>
+          <h1>- C</h1>
         </div>
 
         <div className='text-lg font-mono text-left'>
           <h1 className='text-xl'># My experience</h1>
-          <h1>- UNISÃOMIGUEL 1y (Now)</h1>
-          <h1>- Freelance 1.5y</h1>
+          <Link href={"https://unisaomiguel.edu.br"} target='_blank'>
+          <h1>- UNISÃOMIGUEL</h1>
+          </Link>
+          <h1>- Freelance</h1>
         </div>
 
         <div className='text-lg font-mono text-left'>
@@ -90,7 +93,6 @@ export default function Home() {
           <h1 className='text-xl'># My contacts</h1>
           <h1>- Mail: <a href='mailto:hi@claudioav.com>'>hi@claudioav.com</a></h1>
           <h1>- Discord: <a href='discord:claudioav'>@claudioav</a></h1>
-          <h1>- Phone: <a href='tel:+5581999416600'>+55 81 999416600</a></h1>
         </div>
       </div>
       </div>
